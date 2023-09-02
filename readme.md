@@ -57,6 +57,7 @@ To run this calculator locally on your machine, follow these steps:
 ![Alt text](image-1.png)
 
 </div>
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
