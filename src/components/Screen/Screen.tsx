@@ -2,7 +2,7 @@ import { Component } from 'react';
 import './index.scss';
 
 type ScreenProps = {
-  value: any;
+  value: string;
 };
 
 type ScreenState = {};
