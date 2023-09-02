@@ -5,14 +5,15 @@ type ScreenProps = {
   value: any;
 };
 
-class Screen extends Component<ScreenProps> {
+type ScreenState = {};
+
+class Screen extends Component<ScreenProps, ScreenState> {
   constructor(props: ScreenProps) {
     super(props);
   }
 
   render() {
     const { value } = this.props;
-    console.log(typeof value);
 
     return <div className='screen'>{value}</div>;
   }

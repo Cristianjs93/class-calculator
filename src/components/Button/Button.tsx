@@ -1,26 +1,28 @@
 import { Component, MouseEvent } from 'react';
 import './index.scss';
 
-type NumberButtonProps = {
+type ButtonProps = {
   name: string;
   number: string;
-  handleCLick: (e: MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: MouseEvent) => void;
 };
 
-class NumberButton extends Component<NumberButtonProps> {
-  constructor(props: NumberButtonProps) {
+type ButtonState = {};
+
+class Button extends Component<ButtonProps, ButtonState> {
+  constructor(props: ButtonProps) {
     super(props);
   }
 
   render() {
-    const { name, number, handleCLick } = this.props;
+    const { name, number, onClick } = this.props;
     return (
       <>
         <button
           id={number}
           name={name}
           className={'number-buttons'}
-          onClick={handleCLick}>
+          onClick={onClick}>
           {number}
         </button>
       </>
@@ -28,4 +30,4 @@ class NumberButton extends Component<NumberButtonProps> {
   }
 }
 
-export default NumberButton;
+export default Button;

@@ -3,12 +3,17 @@ import Screen from '../Screen/Screen';
 import Button from '../Button/Button';
 import './index.scss';
 
+type CalculatorProps = {};
+
 type CalculatorState = {
   value: string;
 };
 
-export default class Calculator extends Component<{}, CalculatorState> {
-  constructor(props: {}) {
+export default class Calculator extends Component<
+  CalculatorProps,
+  CalculatorState
+> {
+  constructor(props: CalculatorProps) {
     super(props);
 
     this.state = {
@@ -16,7 +21,7 @@ export default class Calculator extends Component<{}, CalculatorState> {
     };
   }
 
-  handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
+  handleClick = (e: MouseEvent): void => {
     const { id: targetId } = e.currentTarget;
 
     this.setState(() => ({
@@ -24,7 +29,7 @@ export default class Calculator extends Component<{}, CalculatorState> {
     }));
   };
 
-  handleEqual = (e: MouseEvent<HTMLButtonElement>): void => {
+  handleEqual = (e: MouseEvent): void => {
     const { id } = e.currentTarget;
 
     if (this.state.value.slice(-2) == '/0') {
@@ -63,25 +68,17 @@ export default class Calculator extends Component<{}, CalculatorState> {
                     <Button
                       name='digit'
                       number={item}
-                      handleCLick={this.handleClick}
+                      onClick={this.handleClick}
                     />
                   </div>
                 )
               )}
               <div className='calc-container__buttons__numbers__small'>
-                <Button
-                  name='point'
-                  number='.'
-                  handleCLick={this.handleClick}
-                />
+                <Button name='point' number='.' onClick={this.handleClick} />
               </div>
 
               <div className='calc-container__buttons__numbers__small'>
-                <Button
-                  name='operator'
-                  number='/'
-                  handleCLick={this.handleClick}
-                />
+                <Button name='operator' number='/' onClick={this.handleClick} />
               </div>
             </div>
 
