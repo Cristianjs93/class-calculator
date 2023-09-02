@@ -1,17 +1,14 @@
 import { Component } from 'react';
 import Calculator from './components/Calculator/Calculator';
 
-type AppState = {
-  count: number;
-};
+type AppState = {};
 
-class App extends Component<{}, AppState> {
+type AppProps = {};
+class App extends Component<AppProps, AppState> {
   constructor(props: {}) {
     super(props);
-    this.state = {
-      count: 0,
-    };
   }
+
   render() {
     return (
       <>

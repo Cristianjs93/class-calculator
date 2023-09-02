@@ -34,7 +34,7 @@ export default class Calculator extends Component<
 
     if (this.state.value.slice(-2) == '/0') {
       return this.setState(() => ({
-        value: 'error',
+        value: 'Error',
       }));
     }
 
