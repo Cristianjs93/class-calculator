@@ -22,10 +22,10 @@ export default class Calculator extends Component<
   }
 
   handleClick = (e: MouseEvent): void => {
-    const { id: targetId } = e.currentTarget;
+    const { id } = e.currentTarget;
 
     this.setState(() => ({
-      value: this.state.value + `${targetId}`,
+      value: this.state.value + `${id}`,
     }));
   };
 
