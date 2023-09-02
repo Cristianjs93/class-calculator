@@ -7,12 +7,13 @@
   overflow-x: auto;
   overflow-y: hidden;
   cursor: pointer;
+
   &::-webkit-scrollbar {
     height: 7px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: rgb(44, 53, 92);
   }
 
   &::-webkit-scrollbar-thumb {
