@@ -1,5 +1,6 @@
 import { Component, MouseEvent } from 'react';
-import NumberButton from '../NumberButton/NumberButton';
+import Screen from '../Screen/Screen';
+import Button from '../Button/Button';
 import './index.scss';
 
 type CalculatorState = {
@@ -47,7 +48,9 @@ export default class Calculator extends Component<{}, CalculatorState> {
   render() {
     return (
       <div className='calc-container'>
-        <div className='calc-container__display'>{this.state.value}</div>
+        <div className='calc-container__display'>
+          <Screen value={this.state.value} />
+        </div>
 
         <div className='calc-container__buttons'>
           <div className='calc-container__box'>
@@ -57,7 +60,7 @@ export default class Calculator extends Component<{}, CalculatorState> {
                   <div
                     key={item}
                     className='calc-container__buttons__numbers__small'>
-                    <NumberButton
+                    <Button
                       name='digit'
                       number={item}
                       handleCLick={this.handleClick}
@@ -66,7 +69,7 @@ export default class Calculator extends Component<{}, CalculatorState> {
                 )
               )}
               <div className='calc-container__buttons__numbers__small'>
-                <NumberButton
+                <Button
                   name='point'
                   number='.'
                   handleCLick={this.handleClick}
@@ -74,7 +77,7 @@ export default class Calculator extends Component<{}, CalculatorState> {
               </div>
 
               <div className='calc-container__buttons__numbers__small'>
-                <NumberButton
+                <Button
                   name='operator'
                   number='/'
                   handleCLick={this.handleClick}

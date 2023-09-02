@@ -1,0 +1,26 @@
+.screen {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgb(44, 53, 92);
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: pointer;
+  &::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(69, 69, 151);
+  }
+}

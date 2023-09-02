@@ -10,9 +10,9 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px 20px;
-  background-color: rgb(58, 69, 112);
+  background-color: rgb(81, 95, 155);
 
-  @media (min-width: 576px) {
+  @media (min-width: 425px) {
     width: 350px;
   }
 
@@ -21,12 +21,9 @@
     justify-content: flex-end;
     align-items: center;
     height: 20%;
-    font-size: 40px;
-    font-weight: 700;
-    color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(27, 33, 56);
+    background-color: rgb(44, 53, 92);
   }
 
   &__buttons {
@@ -37,7 +34,7 @@
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(27, 33, 56);
+    background-color: rgb(44, 53, 92);
 
     &__numbers {
       width: calc(80% - (10px / 2));
@@ -96,7 +93,7 @@
           color: #ffffff;
           text-transform: uppercase;
           border-radius: 10px;
-          background-color: rgb(79, 79, 170);
+          background-color: rgb(69, 69, 151);
           cursor: pointer;
         }
 
@@ -114,6 +111,7 @@
   }
 
   &__box {
+    width: 100%;
     height: calc(80% - (10px / 2));
     display: flex;
     gap: 10px;

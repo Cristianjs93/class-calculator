@@ -6,11 +6,8 @@ type NumberButtonProps = {
   number: string;
   handleCLick: (e: MouseEvent<HTMLButtonElement>) => void;
 };
-type NumberButtonState = {
-  count: number;
-};
 
-class NumberButton extends Component<NumberButtonProps, NumberButtonState> {
+class NumberButton extends Component<NumberButtonProps> {
   constructor(props: NumberButtonProps) {
     super(props);
   }
